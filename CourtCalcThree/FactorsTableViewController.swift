@@ -26,16 +26,18 @@ class FactorsTableViewController: UITableViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
       tableView.sectionHeaderHeight = kSectionHeight
+      self.tableView.delegate = self
+      self.tableView.dataSource = self
       
     }
   
-  override func viewWillDisappear(animated: Bool) {
-    super.viewWillDisappear(animated)
-    femaleREE()
-    minFemaleTEE()
-    maxFemaleTEE()
-    BMI()
-  }
+//  override func viewWillDisappear(animated: Bool) {
+//    super.viewWillDisappear(animated)
+//    femaleREE()
+//    minFemaleTEE()
+//    maxFemaleTEE()
+//    BMI()
+//  }
   
   @IBAction func sexSelectorSelected(sender: AnyObject) {
     if sexSelector.selectedSegmentIndex == 0 {

@@ -12,7 +12,7 @@ class ResultsTableViewController: UITableViewController {
   
   let kSectionHeight: CGFloat = 25
   var numberFormatter: NSNumberFormatter!
-  var ages: String!
+  var age: String!
   var height: String!
   var weight: String!
   var usualWeight: String!
@@ -45,13 +45,13 @@ class ResultsTableViewController: UITableViewController {
       self.navigationController?.navigationBar.tintColor = UIColor.blackColor()
       self.navigationController?.navigationBar.items?.first?.title = "Back"
       
-      self.ageLabel.text = "\(ages) Years"
-//      self.heightInchesLabel.text = "\(height)"
-//      self.heightCMLabel.text = "\(NumberFormatter.sharedInstance.stringFromNumber(((height as NSString).floatValue) * 2.54))"
-//      self.currentWeightLabel.text = "\(weight)"
-//      self.currentKGWeightLabel.text = "\(NumberFormatter.sharedInstance.stringFromNumber(((weight as NSString).floatValue) / 2.2))"
-//      self.usualWeightLabel.text = "\(usualWeight)"
-//      self.usualWeightKGLabel.text = "\(NumberFormatter.sharedInstance.stringFromNumber(((usualWeight as NSString).floatValue) / 2.2))"
+      self.ageLabel.text = "\(age) Years"
+      self.heightInchesLabel.text = "\(height)IN"
+      self.heightCMLabel.text = "\(NumberFormatter.sharedInstance.stringFromNumber(((height as NSString).floatValue) * 2.54)!)CM"
+      self.currentWeightLabel.text = "\(weight)lbs"
+      self.currentKGWeightLabel.text = "\(NumberFormatter.sharedInstance.stringFromNumber(((weight as NSString).floatValue) / 2.2)!)kg"
+      self.usualWeightLabel.text = "\(usualWeight)lbs"
+      self.usualWeightKGLabel.text = "\(NumberFormatter.sharedInstance.stringFromNumber(((usualWeight as NSString).floatValue) / 2.2)!)kg"
       
     }
 

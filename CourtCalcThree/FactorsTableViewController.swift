@@ -90,8 +90,16 @@ class FactorsTableViewController: UITableViewController, UITextFieldDelegate {
   
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     if segue.identifier == "RESULTS" {
+      let resultsVC = segue.destinationViewController as! ResultsTableViewController
+      resultsVC.height = self.height.text
+      resultsVC.ages = self.age.text
+      resultsVC.weight = self.currentWeight.text
+      resultsVC.usualWeight = self.normalWeight.text
+      resultsVC.proteinLow = self.minProteinFactor.text
+      resultsVC.proteinHigh = self.maxProteinFactor.text
+      resultsVC.activityLow = self.minActivityFactor.text
+      resultsVC.activityHigh = self.maxActivityFactor.text
       
-
     }
   }
 

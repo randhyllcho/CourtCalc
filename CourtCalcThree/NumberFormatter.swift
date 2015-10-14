@@ -21,3 +21,4 @@ class NumberFormatter: NSNumberFormatter {
   }
   static let sharedInstance = NumberFormatter()
 }
+

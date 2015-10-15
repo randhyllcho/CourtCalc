@@ -53,6 +53,7 @@ class FactorsTableViewController: UITableViewController, UITextFieldDelegate {
     }
   }
   
+// MARK: FUNCTIONS
   func femaleREE() -> Float {
     let REE = (10 * (self.currentWeight?.text as NSString!).floatValue) + (6 * (self.height?.text as NSString!).floatValue) - (5 * (self.age?.text as NSString!).floatValue) - 161
     return REE
@@ -90,6 +91,7 @@ class FactorsTableViewController: UITableViewController, UITextFieldDelegate {
     return BMI
   }
   
+// MARK: PREPARE FOR SEGUE
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     if segue.identifier == "RESULTS" {
       if let resultsVC = segue.destinationViewController as? ResultsTableViewController {
@@ -104,5 +106,10 @@ class FactorsTableViewController: UITableViewController, UITextFieldDelegate {
       }
     }
   }
+  
+//TODO: 
+  // calculate IBW and weight range. Get % of IBW, % of usual body weight and % change from current to normal weight
+  // find space for that everything that doesnt look like hell...
+  // get the functions to pass between view controllers without breaking MVC
 
 }

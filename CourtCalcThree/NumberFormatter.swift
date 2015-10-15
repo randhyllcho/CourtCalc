@@ -22,3 +22,18 @@ class NumberFormatter: NSNumberFormatter {
   static let sharedInstance = NumberFormatter()
 }
 
+
+class AnotherNumberFormatter: NumberFormatter {
+  override init() {
+    super.init()
+    self.maximumFractionDigits = 2
+    self.minimumFractionDigits = 2
+    self.alwaysShowsDecimalSeparator = true
+    self.numberStyle = .DecimalStyle
+  }
+
+  required init?(coder aDecoder: NSCoder) {
+    super.init(coder: aDecoder)!
+  }
+  static let reSharedInstance = AnotherNumberFormatter()
+}

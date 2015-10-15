@@ -302,19 +302,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <label key="tableHeaderView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uUg-3T-Jlb">
-                            <rect key="frame" x="0.0" y="64" width="600" height="44"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <animations/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
                         <sections>
                             <tableViewSection headerTitle="Age" id="MQb-cz-Izt">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="F9j-Pt-ea3">
-                                        <rect key="frame" x="0.0" y="136" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="F9j-Pt-ea3" id="JWI-Pq-Hz9">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
@@ -341,7 +333,7 @@
                             <tableViewSection headerTitle="Height" id="V9A-bZ-kfX">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Bjh-ic-Psa">
-                                        <rect key="frame" x="0.0" y="208" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="164" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Bjh-ic-Psa" id="I0R-Ef-mdc">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
@@ -377,7 +369,7 @@
                             <tableViewSection headerTitle="Current Weight / Usual Weight" id="Yb2-yA-pKf">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="MR7-kR-ugh">
-                                        <rect key="frame" x="0.0" y="280" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="236" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MR7-kR-ugh" id="4nR-W5-jMU">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
@@ -409,7 +401,7 @@
                                         <animations/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="MSu-E9-aFc">
-                                        <rect key="frame" x="0.0" y="324" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="280" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MSu-E9-aFc" id="vOS-Hu-RI0">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
@@ -445,7 +437,7 @@
                             <tableViewSection headerTitle="REE / TEE Range" id="Thg-kF-cvC">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="fgF-KD-0Nk">
-                                        <rect key="frame" x="0.0" y="396" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="352" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fgF-KD-0Nk" id="Atc-Nx-GaS">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
@@ -468,7 +460,7 @@
                                         <animations/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="1qy-uI-f7b">
-                                        <rect key="frame" x="0.0" y="440" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="396" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1qy-uI-f7b" id="T8A-Y5-7qP">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
@@ -501,24 +493,24 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Fluid / Protein" id="3M0-I8-GJP">
+                            <tableViewSection headerTitle="Protein Range" id="3M0-I8-GJP">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="wSH-rZ-e0Z">
-                                        <rect key="frame" x="0.0" y="512" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="468" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wSH-rZ-e0Z" id="9Tc-Ox-meM">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fluid" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kUD-4G-Sez">
-                                                    <rect key="frame" x="206" y="11" width="37" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Protein" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zKg-WW-aeb">
+                                                    <rect key="frame" x="348" y="11" width="55" height="21"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.42006400049999998" green="0.59349961100000004" blue="0.74112215910000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Protein" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zKg-WW-aeb">
-                                                    <rect key="frame" x="348" y="11" width="55" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Protein" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZpO-cz-bhU">
+                                                    <rect key="frame" x="198" y="11" width="55" height="21"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.42006400049999998" green="0.59349961100000004" blue="0.74112215910000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -527,10 +519,37 @@
                                             </subviews>
                                             <animations/>
                                             <constraints>
-                                                <constraint firstItem="kUD-4G-Sez" firstAttribute="centerX" secondItem="9Tc-Ox-meM" secondAttribute="centerX" multiplier="0.75" id="WDr-eM-Bou"/>
+                                                <constraint firstItem="ZpO-cz-bhU" firstAttribute="centerX" secondItem="9Tc-Ox-meM" secondAttribute="centerX" multiplier="0.75" id="OgL-En-bTH"/>
+                                                <constraint firstItem="ZpO-cz-bhU" firstAttribute="centerY" secondItem="9Tc-Ox-meM" secondAttribute="centerY" id="YtT-bd-xTb"/>
                                                 <constraint firstItem="zKg-WW-aeb" firstAttribute="centerY" secondItem="9Tc-Ox-meM" secondAttribute="centerY" id="pLP-Pv-VmH"/>
                                                 <constraint firstItem="zKg-WW-aeb" firstAttribute="centerX" secondItem="9Tc-Ox-meM" secondAttribute="centerX" multiplier="1.25" id="vAP-rh-Sa1"/>
-                                                <constraint firstItem="kUD-4G-Sez" firstAttribute="centerY" secondItem="9Tc-Ox-meM" secondAttribute="centerY" id="vai-Zd-0Pr"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Fluid " id="PBt-Lt-TYc">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="2B9-lj-9H2">
+                                        <rect key="frame" x="0.0" y="540" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2B9-lj-9H2" id="erb-N8-vfo">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fluid" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QDx-Jb-eiF">
+                                                    <rect key="frame" x="282" y="11" width="37" height="21"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.42006400049999998" green="0.59349961100000004" blue="0.74112215910000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstItem="QDx-Jb-eiF" firstAttribute="centerY" secondItem="erb-N8-vfo" secondAttribute="centerY" id="H8u-iA-tfJ"/>
+                                                <constraint firstItem="QDx-Jb-eiF" firstAttribute="centerX" secondItem="erb-N8-vfo" secondAttribute="centerX" id="vtK-1g-Ri1"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <animations/>
@@ -550,10 +569,11 @@
                         <outlet property="ageLabel" destination="Jz7-E6-VrW" id="BKW-OW-Dse"/>
                         <outlet property="currentKGWeightLabel" destination="96q-j8-3xH" id="Kyz-eP-UV3"/>
                         <outlet property="currentWeightLabel" destination="ftB-dP-JTY" id="wZN-aE-RGs"/>
-                        <outlet property="fluidLabel" destination="kUD-4G-Sez" id="3V6-Oy-EuM"/>
+                        <outlet property="fluidLabel" destination="QDx-Jb-eiF" id="b8k-wx-Vu7"/>
                         <outlet property="heightCMLabel" destination="gl6-dm-Zy9" id="gXk-50-9Sj"/>
                         <outlet property="heightInchesLabel" destination="hoY-xu-yMr" id="gXn-x9-WSd"/>
-                        <outlet property="proteinLabel" destination="zKg-WW-aeb" id="qKt-HU-bZs"/>
+                        <outlet property="proteinHighLabel" destination="zKg-WW-aeb" id="J5J-wD-ObM"/>
+                        <outlet property="proteinLowLabel" destination="ZpO-cz-bhU" id="GvU-5F-A08"/>
                         <outlet property="usualWeightKGLabel" destination="AAl-uv-XfX" id="4gO-Fp-eJu"/>
                         <outlet property="usualWeightLabel" destination="AVj-1Z-nht" id="mzc-Ej-pjl"/>
                     </connections>

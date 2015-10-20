@@ -23,8 +23,11 @@ class ResultsTableViewController: UITableViewController {
   var proteinHigh: String!
   var activityLow: String!
   var activityHigh: String!
+  
+  var test: String!
 
 // MARK: ALL THE OUTLETS...
+  
   @IBOutlet weak var ageLabel: UILabel!
   @IBOutlet weak var heightInchesLabel: UILabel!
   @IBOutlet weak var heightCMLabel: UILabel!
@@ -40,11 +43,14 @@ class ResultsTableViewController: UITableViewController {
   @IBOutlet weak var proteinHighLabel: UILabel!
   
 // MARK: VDL
+  
     override func viewDidLoad() {
         super.viewDidLoad()
       tableView.sectionHeaderHeight = kSectionHeight
       self.navigationController?.navigationBar.tintColor = UIColor.blackColor()
       self.navigationController?.navigationBar.items?.first?.title = "Back"
+      
+      self.title = test
       
       let currentWeightKG = NumberFormatter.sharedInstance.stringFromNumber(((weight as NSString).floatValue) / 2.2)!
       let heightCM = NumberFormatter.sharedInstance.stringFromNumber(((height as NSString).floatValue) * 2.54)!
@@ -52,7 +58,7 @@ class ResultsTableViewController: UITableViewController {
       let proteinReq = AnotherNumberFormatter.reSharedInstance.stringFromNumber((((weight as NSString).floatValue) / 2.2))!
       
       self.ageLabel.text = "\(age) Years"
-      self.heightInchesLabel.text = "\(height)IN"
+      self.heightInchesLabel.text = "\(height)in"
       self.heightCMLabel.text = "\(heightCM)CM"
       self.currentWeightLabel.text = "\(weight)lbs"
       self.currentKGWeightLabel.text = "\(currentWeightKG)kg"
@@ -60,9 +66,10 @@ class ResultsTableViewController: UITableViewController {
       self.usualWeightKGLabel.text = "\(usualWeightKG)kg"
       self.proteinLowLabel.text = "\(proteinReq)g"
       self.proteinHighLabel.text = "\(proteinReq)g"
+      self.REELabel.text = REE
+      self.TEELowLabel.text = TEELow
+      self.TEEHighLabel.text = TEEHigh
     }
-  
-
-  
+ 
 
 }

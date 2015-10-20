@@ -28,8 +28,20 @@ class CourtCalcThreeTests: XCTestCase {
     
     func testPerformanceExample() {
         // This is an example of a performance test case.
+      func getIBW() -> Float {
+        let heightFactor = Float(74.0) - 60.0
+        let weightAddition = 6.0 * heightFactor
+        let IBW = weightAddition + 106.0
+        return IBW
+      }
         self.measureBlock {
             // Put the code you want to measure the time of here.
+          func getIBW() -> Float {
+            let heightFactor = Float(74.0) - 60.0
+            let weightAddition = 6.0 * heightFactor
+            let IBW = weightAddition + 106.0
+            return IBW
+          }
         }
     }
     

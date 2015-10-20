@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		32028BA91BD09560008B95F7 /* FuncMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32028BA81BD09560008B95F7 /* FuncMethod.swift */; settings = {ASSET_TAGS = (); }; };
 		32B5B02C1BBF234700A910C4 /* ResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B5B02B1BBF234700A910C4 /* ResultsTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		32F2B99D1BB9EF4900A7FF70 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F2B99C1BB9EF4900A7FF70 /* AppDelegate.swift */; };
 		32F2B9A21BB9EF4900A7FF70 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32F2B9A01BB9EF4900A7FF70 /* Main.storyboard */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		32028BA81BD09560008B95F7 /* FuncMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FuncMethod.swift; sourceTree = "<group>"; };
 		32B5B02B1BBF234700A910C4 /* ResultsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsTableViewController.swift; sourceTree = "<group>"; };
 		32F2B9991BB9EF4900A7FF70 /* CourtCalcThree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CourtCalcThree.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32F2B99C1BB9EF4900A7FF70 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +82,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		327B07FD1BD5C14900F81028 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				32F2B9D31BBA2A1B00A7FF70 /* NumberFormatter.swift */,
+				32028BA81BD09560008B95F7 /* FuncMethod.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		327B07FE1BD5C15300F81028 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				32F2B9A81BB9EF4900A7FF70 /* LaunchScreen.storyboard */,
+				32F2B9A01BB9EF4900A7FF70 /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		327B07FF1BD5C15A00F81028 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				32F2B9CD1BB9EF8100A7FF70 /* FactorsTableViewController.swift */,
+				32B5B02B1BBF234700A910C4 /* ResultsTableViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		32F2B9901BB9EF4900A7FF70 = {
 			isa = PBXGroup;
 			children = (
@@ -103,13 +132,11 @@
 		32F2B99B1BB9EF4900A7FF70 /* CourtCalcThree */ = {
 			isa = PBXGroup;
 			children = (
+				327B07FD1BD5C14900F81028 /* Model */,
+				327B07FE1BD5C15300F81028 /* View */,
+				327B07FF1BD5C15A00F81028 /* Controllers */,
 				32F2B99C1BB9EF4900A7FF70 /* AppDelegate.swift */,
-				32F2B9CD1BB9EF8100A7FF70 /* FactorsTableViewController.swift */,
-				32B5B02B1BBF234700A910C4 /* ResultsTableViewController.swift */,
-				32F2B9D31BBA2A1B00A7FF70 /* NumberFormatter.swift */,
-				32F2B9A01BB9EF4900A7FF70 /* Main.storyboard */,
 				32F2B9A61BB9EF4900A7FF70 /* Assets.xcassets */,
-				32F2B9A81BB9EF4900A7FF70 /* LaunchScreen.storyboard */,
 				32F2B9AB1BB9EF4900A7FF70 /* Info.plist */,
 				32F2B9A31BB9EF4900A7FF70 /* CourtCalcThree.xcdatamodeld */,
 			);
@@ -268,6 +295,7 @@
 				32F2B9D41BBA2A1B00A7FF70 /* NumberFormatter.swift in Sources */,
 				32F2B9A51BB9EF4900A7FF70 /* CourtCalcThree.xcdatamodeld in Sources */,
 				32F2B99D1BB9EF4900A7FF70 /* AppDelegate.swift in Sources */,
+				32028BA91BD09560008B95F7 /* FuncMethod.swift in Sources */,
 				32B5B02C1BBF234700A910C4 /* ResultsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

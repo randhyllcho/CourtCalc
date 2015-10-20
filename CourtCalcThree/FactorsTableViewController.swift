@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FactorsTableViewController: UITableViewController, UITextFieldDelegate {
+class FactorsTableViewController: UITableViewController, UITextFieldDelegate, Factor {
   
   @IBOutlet weak var sexSelector: UISegmentedControl!
   @IBOutlet weak var age: UITextField!
@@ -21,68 +21,26 @@ class FactorsTableViewController: UITableViewController, UITextFieldDelegate {
   @IBOutlet weak var height: UITextField!
   
   let kSectionHeight: CGFloat = 25
+  
+  var conversion = StringConversion()
+  var factor = ""
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
       tableView.sectionHeaderHeight = kSectionHeight
-      self.tableView.delegate = self
-      self.tableView.dataSource = self
-      
+
     }
-  
-//  override func viewWillDisappear(animated: Bool) {
-//    super.viewWillDisappear(animated)
-//    femaleREE()
-//    minFemaleTEE()
-//    maxFemaleTEE()
-//    BMI()
-//  }
   
   @IBAction func sexSelectorSelected(sender: AnyObject) {
     if sexSelector.selectedSegmentIndex == 0 {
-      maleREE()
-      minMaleTEE()
-      maxMaleTEE()
-      BMI()
+      
     } else {
-      femaleREE()
-      minFemaleTEE()
-      maxFemaleTEE()
-      BMI()
+
     }
   }
   
 // MARK: FUNCTIONS
-  func femaleREE() -> Float {
-    let REE = (10 * (self.currentWeight?.text as NSString!).floatValue) + (6 * (self.height?.text as NSString!).floatValue) - (5 * (self.age?.text as NSString!).floatValue) - 161
-    return REE
-  }
-  
-  func maleREE() -> Float {
-    let REE = (10 * (self.currentWeight?.text as NSString!).floatValue) + (6 * (self.height?.text as NSString!).floatValue) - (5 * (self.age?.text as NSString!).floatValue) + 5
-    return REE
-  }
-  
-  func minFemaleTEE() -> Float{
-    let minTEE = (minActivityFactor.text as NSString!).floatValue * femaleREE()
-    return minTEE
-  }
-  
-  func maxFemaleTEE() -> Float {
-    let maxTEE = (maxActivityFactor.text as NSString!).floatValue * femaleREE()
-    return maxTEE
-  }
-  
-  func minMaleTEE() -> Float{
-    let minTEE = (minActivityFactor.text as NSString!).floatValue * maleREE()
-    return minTEE
-  }
-  
-  func maxMaleTEE() -> Float {
-    let maxTEE = (maxActivityFactor.text as NSString!).floatValue * maleREE()
-    return maxTEE
-  }
   
   func BMI() -> Float {
     let weight = (self.currentWeight.text as NSString!).floatValue
@@ -92,9 +50,21 @@ class FactorsTableViewController: UITableViewController, UITextFieldDelegate {
   }
   
 // MARK: PREPARE FOR SEGUE
+  
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     if segue.identifier == "RESULTS" {
       if let resultsVC = segue.destinationViewController as? ResultsTableViewController {
+        
+        let maleREE = conversion.maleREE(weight: (self.currentWeight?.text)!, height: (self.height?.text)!, age: (self.age?.text)!)
+        let minMaleTEE = conversion.minMaleTEE(activity: (self.minActivityFactor?.text)!, weight: (self.currentWeight?.text)!, height: (self.height?.text)!, age: (self.age?.text)!)
+        let maxMaleTEE = conversion.maxMaleTEE(activity: (self.maxActivityFactor?.text)!, weight: (self.currentWeight?.text)!, height: (self.height?.text)!, age: (self.age?.text)!)
+        let femaleREE = conversion.femaleREE(weight: (self.currentWeight?.text)!, height: (self.height?.text)!, age: (self.age?.text)!)
+        print(femaleREE)
+        let minFemaleTEE = conversion.minFemaleTEE(activity: (self.minActivityFactor?.text)!, weight: (self.currentWeight?.text)!, height: (self.height?.text)!, age: (self.age?.text)!)
+        print(minFemaleTEE)
+        let maxFemaleTEE = conversion.maxFemaleTEE(activity: (self.maxActivityFactor?.text)!, weight: (self.currentWeight?.text)!, height: (self.height?.text)!, age: (self.age?.text)!)
+        print(maxFemaleTEE)
+        
         resultsVC.height = self.height.text
         resultsVC.age = self.age.text
         resultsVC.weight = self.currentWeight.text
@@ -103,6 +73,10 @@ class FactorsTableViewController: UITableViewController, UITextFieldDelegate {
         resultsVC.proteinHigh = self.maxProteinFactor.text
         resultsVC.activityLow = self.minActivityFactor.text
         resultsVC.activityHigh = self.maxActivityFactor.text
+        resultsVC.REE = "\(maleREE)"
+        resultsVC.TEELow = "\(minMaleTEE)"
+        resultsVC.TEEHigh = "\(maxMaleTEE)"
+        
       }
     }
   }

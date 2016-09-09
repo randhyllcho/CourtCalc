@@ -7,17 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		32028BA91BD09560008B95F7 /* FuncMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32028BA81BD09560008B95F7 /* FuncMethod.swift */; settings = {ASSET_TAGS = (); }; };
-		32B5B02C1BBF234700A910C4 /* ResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B5B02B1BBF234700A910C4 /* ResultsTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		32028BA91BD09560008B95F7 /* FuncMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32028BA81BD09560008B95F7 /* FuncMethod.swift */; };
+		32574C781C743FB900F0D85F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32574C771C743FB900F0D85F /* Assets.xcassets */; };
+		3278E4C41C84F939007A8DDA /* InfoPopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3278E4C31C84F939007A8DDA /* InfoPopViewController.swift */; };
+		3278E4C61C84FE1E007A8DDA /* unicat copy.png in Resources */ = {isa = PBXBuildFile; fileRef = 3278E4C51C84FE1E007A8DDA /* unicat copy.png */; };
+		3279B0E51C74487B001F1A23 /* AppIcon.appiconset in Resources */ = {isa = PBXBuildFile; fileRef = 3279B0E41C74487B001F1A23 /* AppIcon.appiconset */; };
+		3279B0E71C744C3C001F1A23 /* Icon-60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3279B0E61C744C3C001F1A23 /* Icon-60@3x.png */; };
+		3279B0E91C744C99001F1A23 /* Icon-60@3x@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3279B0E81C744C99001F1A23 /* Icon-60@3x@2x.png */; };
+		32B5B02C1BBF234700A910C4 /* ResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B5B02B1BBF234700A910C4 /* ResultsTableViewController.swift */; };
 		32F2B99D1BB9EF4900A7FF70 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F2B99C1BB9EF4900A7FF70 /* AppDelegate.swift */; };
 		32F2B9A21BB9EF4900A7FF70 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32F2B9A01BB9EF4900A7FF70 /* Main.storyboard */; };
 		32F2B9A51BB9EF4900A7FF70 /* CourtCalcThree.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 32F2B9A31BB9EF4900A7FF70 /* CourtCalcThree.xcdatamodeld */; };
-		32F2B9A71BB9EF4900A7FF70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32F2B9A61BB9EF4900A7FF70 /* Assets.xcassets */; };
 		32F2B9AA1BB9EF4900A7FF70 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32F2B9A81BB9EF4900A7FF70 /* LaunchScreen.storyboard */; };
 		32F2B9B51BB9EF4900A7FF70 /* CourtCalcThreeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F2B9B41BB9EF4900A7FF70 /* CourtCalcThreeTests.swift */; };
 		32F2B9C01BB9EF4900A7FF70 /* CourtCalcThreeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F2B9BF1BB9EF4900A7FF70 /* CourtCalcThreeUITests.swift */; };
-		32F2B9CE1BB9EF8100A7FF70 /* FactorsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F2B9CD1BB9EF8100A7FF70 /* FactorsTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		32F2B9D41BBA2A1B00A7FF70 /* NumberFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F2B9D31BBA2A1B00A7FF70 /* NumberFormatter.swift */; settings = {ASSET_TAGS = (); }; };
+		32F2B9CE1BB9EF8100A7FF70 /* FactorsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F2B9CD1BB9EF8100A7FF70 /* FactorsTableViewController.swift */; };
+		32F2B9D41BBA2A1B00A7FF70 /* NumberFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F2B9D31BBA2A1B00A7FF70 /* NumberFormatter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,12 +44,17 @@
 
 /* Begin PBXFileReference section */
 		32028BA81BD09560008B95F7 /* FuncMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FuncMethod.swift; sourceTree = "<group>"; };
+		32574C771C743FB900F0D85F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3278E4C31C84F939007A8DDA /* InfoPopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoPopViewController.swift; sourceTree = "<group>"; };
+		3278E4C51C84FE1E007A8DDA /* unicat copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "unicat copy.png"; sourceTree = "<group>"; };
+		3279B0E41C74487B001F1A23 /* AppIcon.appiconset */ = {isa = PBXFileReference; lastKnownFileType = folder; path = AppIcon.appiconset; sourceTree = "<group>"; };
+		3279B0E61C744C3C001F1A23 /* Icon-60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@3x.png"; sourceTree = "<group>"; };
+		3279B0E81C744C99001F1A23 /* Icon-60@3x@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@3x@2x.png"; sourceTree = "<group>"; };
 		32B5B02B1BBF234700A910C4 /* ResultsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsTableViewController.swift; sourceTree = "<group>"; };
 		32F2B9991BB9EF4900A7FF70 /* CourtCalcThree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CourtCalcThree.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32F2B99C1BB9EF4900A7FF70 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		32F2B9A11BB9EF4900A7FF70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		32F2B9A41BB9EF4900A7FF70 /* CourtCalcThree.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CourtCalcThree.xcdatamodel; sourceTree = "<group>"; };
-		32F2B9A61BB9EF4900A7FF70 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		32F2B9A91BB9EF4900A7FF70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		32F2B9AB1BB9EF4900A7FF70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		32F2B9B01BB9EF4900A7FF70 /* CourtCalcThreeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CourtCalcThreeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -105,6 +115,7 @@
 			children = (
 				32F2B9CD1BB9EF8100A7FF70 /* FactorsTableViewController.swift */,
 				32B5B02B1BBF234700A910C4 /* ResultsTableViewController.swift */,
+				3278E4C31C84F939007A8DDA /* InfoPopViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -136,7 +147,11 @@
 				327B07FE1BD5C15300F81028 /* View */,
 				327B07FF1BD5C15A00F81028 /* Controllers */,
 				32F2B99C1BB9EF4900A7FF70 /* AppDelegate.swift */,
-				32F2B9A61BB9EF4900A7FF70 /* Assets.xcassets */,
+				32574C771C743FB900F0D85F /* Assets.xcassets */,
+				3278E4C51C84FE1E007A8DDA /* unicat copy.png */,
+				3279B0E61C744C3C001F1A23 /* Icon-60@3x.png */,
+				3279B0E81C744C99001F1A23 /* Icon-60@3x@2x.png */,
+				3279B0E41C74487B001F1A23 /* AppIcon.appiconset */,
 				32F2B9AB1BB9EF4900A7FF70 /* Info.plist */,
 				32F2B9A31BB9EF4900A7FF70 /* CourtCalcThree.xcdatamodeld */,
 			);
@@ -228,6 +243,7 @@
 				TargetAttributes = {
 					32F2B9981BB9EF4900A7FF70 = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = 3H6D2LJDAK;
 					};
 					32F2B9AF1BB9EF4900A7FF70 = {
 						CreatedOnToolsVersion = 7.0;
@@ -265,8 +281,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				32F2B9AA1BB9EF4900A7FF70 /* LaunchScreen.storyboard in Resources */,
-				32F2B9A71BB9EF4900A7FF70 /* Assets.xcassets in Resources */,
+				3278E4C61C84FE1E007A8DDA /* unicat copy.png in Resources */,
+				3279B0E71C744C3C001F1A23 /* Icon-60@3x.png in Resources */,
+				32574C781C743FB900F0D85F /* Assets.xcassets in Resources */,
+				3279B0E51C74487B001F1A23 /* AppIcon.appiconset in Resources */,
 				32F2B9A21BB9EF4900A7FF70 /* Main.storyboard in Resources */,
+				3279B0E91C744C99001F1A23 /* Icon-60@3x@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,6 +316,7 @@
 				32F2B9A51BB9EF4900A7FF70 /* CourtCalcThree.xcdatamodeld in Sources */,
 				32F2B99D1BB9EF4900A7FF70 /* AppDelegate.swift in Sources */,
 				32028BA91BD09560008B95F7 /* FuncMethod.swift in Sources */,
+				3278E4C41C84F939007A8DDA /* InfoPopViewController.swift in Sources */,
 				32B5B02C1BBF234700A910C4 /* ResultsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -438,10 +459,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = CourtCalcThree/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = sexy.royachoga.CourtCalcThree;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -449,10 +474,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = CourtCalcThree/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = sexy.royachoga.CourtCalcThree;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

@@ -25,35 +25,35 @@ struct StringConversion: Factor {
   }
   
   func maleREE(weight weight: String, height: String, age: String) -> Float {
-    let REE = (10 * (weight as NSString!).floatValue) + (6 * (height as NSString!).floatValue) - (5 * (age as NSString!).floatValue) + 5
+    let REE = (10 * ((weight as NSString!).floatValue) / 2.2) + (6.25 * ((height as NSString!).floatValue) * 2.54) - (5 * (age as NSString!).floatValue) + 5
     return REE
   }
   
   func femaleREE(weight weight: String, height: String, age: String) -> Float {
-    let REE = (10 * (weight as NSString!).floatValue) + (6 * (height as NSString!).floatValue) - (5 * (age as NSString!).floatValue) - 161
+    let REE = (10 * ((weight as NSString!).floatValue) / 2.2) + (6.25 * ((height as NSString!).floatValue) * 2.54) - (5 * (age as NSString!).floatValue) - 161
     return REE
   }
   
   func minMaleTEE(activity activity: String, weight: String, height: String, age: String) -> Float{
-    let REE = (10 * (weight as NSString!).floatValue) + (6 * (height as NSString!).floatValue) - (5 * (age as NSString!).floatValue) + 5
+    let REE = (10 * ((weight as NSString!).floatValue) / 2.2) + (6.25 * ((height as NSString!).floatValue) * 2.54) - (5 * (age as NSString!).floatValue) + 5
     let minTEE = (activity as NSString!).floatValue * REE
     return minTEE
   }
   
   func maxMaleTEE(activity activity: String, weight: String, height: String, age: String) -> Float {
-    let REE = (10 * (weight as NSString!).floatValue) + (6 * (height as NSString!).floatValue) - (5 * (age as NSString!).floatValue) + 5
+    let REE = (10 * ((weight as NSString!).floatValue) / 2.2) + (6.25 * ((height as NSString!).floatValue) * 2.54) - (5 * (age as NSString!).floatValue) + 5
     let maxTEE = (activity as NSString!).floatValue * REE
     return maxTEE
   }
   
   func minFemaleTEE(activity activity: String, weight: String, height: String, age: String) -> Float{
-    let REE = (10 * (weight as NSString!).floatValue) + (6 * (height as NSString!).floatValue) - (5 * (age as NSString!).floatValue) - 161
+    let REE = (10 * ((weight as NSString!).floatValue) / 2.2) + (6.25 * ((height as NSString!).floatValue) * 2.54) - (5 * (age as NSString!).floatValue) - 161
     let minTEE = (activity as NSString!).floatValue * REE
     return minTEE
   }
   
   func maxFemaleTEE(activity activity: String, weight: String, height: String, age: String) -> Float {
-    let REE = (10 * (weight as NSString!).floatValue) + (6 * (height as NSString!).floatValue) - (5 * (age as NSString!).floatValue) - 161
+    let REE = (10 * ((weight as NSString!).floatValue) / 2.2) + (6.25 * ((height as NSString!).floatValue) * 2.54) - (5 * (age as NSString!).floatValue) - 161
     let maxTEE = (activity as NSString!).floatValue * REE
     return maxTEE
   }

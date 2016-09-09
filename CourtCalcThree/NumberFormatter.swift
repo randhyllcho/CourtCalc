@@ -26,9 +26,9 @@ class NumberFormatter: NSNumberFormatter {
 class AnotherNumberFormatter: NumberFormatter {
   override init() {
     super.init()
-    self.maximumFractionDigits = 2
-    self.minimumFractionDigits = 2
-    self.alwaysShowsDecimalSeparator = true
+    self.maximumFractionDigits = 0
+    self.minimumFractionDigits = 0
+    self.alwaysShowsDecimalSeparator = false
     self.numberStyle = .DecimalStyle
   }
 

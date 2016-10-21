@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NumberFormatter: NSNumberFormatter {
+class NewNumberFormatter: NumberFormatter {
   required init?(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)!
   }
@@ -17,9 +17,9 @@ class NumberFormatter: NSNumberFormatter {
     self.maximumFractionDigits = 1
     self.minimumFractionDigits = 1
     self.alwaysShowsDecimalSeparator = true
-    self.numberStyle = .DecimalStyle
+    self.numberStyle = .decimal
   }
-  static let sharedInstance = NumberFormatter()
+  static let sharedInstance = NewNumberFormatter()
 }
 
 
@@ -29,7 +29,7 @@ class AnotherNumberFormatter: NumberFormatter {
     self.maximumFractionDigits = 0
     self.minimumFractionDigits = 0
     self.alwaysShowsDecimalSeparator = false
-    self.numberStyle = .DecimalStyle
+    self.numberStyle = .decimal
   }
 
   required init?(coder aDecoder: NSCoder) {

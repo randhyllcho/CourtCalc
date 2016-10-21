@@ -8,10 +8,40 @@
 
 import UIKit
 
+fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l < r
+  case (nil, _?):
+    return true
+  default:
+    return false
+  }
+}
+
+fileprivate func >= <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l >= r
+  default:
+    return !(lhs < rhs)
+  }
+}
+
+fileprivate func <= <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l <= r
+  default:
+    return !(rhs < lhs)
+  }
+}
+
+
 class ResultsTableViewController: UITableViewController {
   
   let kSectionHeight: CGFloat = 25
-  var numberFormatter: NSNumberFormatter!
+  var numberFormatter: NewNumberFormatter!
   var age: String!
   var height: String!
   var weight: String!
@@ -26,7 +56,7 @@ class ResultsTableViewController: UITableViewController {
   var IBW: String!
   var BMI: String!
   
-  let kInchesToCM = Float(2.54)
+  let kInchesToCM = Double(2.54)
   let kLbsToKG = Double(2.2)
 
   
@@ -51,30 +81,30 @@ class ResultsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
       tableView.sectionHeaderHeight = kSectionHeight
-      self.navigationController?.navigationBar.tintColor = UIColor.blackColor()
+      self.navigationController?.navigationBar.tintColor = UIColor.black
       
-      let currentWeightKG = NumberFormatter.sharedInstance.stringFromNumber(((weight as NSString).doubleValue) / kLbsToKG)!
-      let heightCM = NumberFormatter.sharedInstance.stringFromNumber(((height as NSString).floatValue) * kInchesToCM)!
-      let usualWeightKG = NumberFormatter.sharedInstance.stringFromNumber(((usualWeight as NSString).doubleValue) / kLbsToKG)!
-      let proteinReq = AnotherNumberFormatter.reSharedInstance.stringFromNumber((((weight as NSString).doubleValue) / kLbsToKG))!
-      let fluid = AnotherNumberFormatter.reSharedInstance.stringFromNumber(getFluid(age, weight: weight))!
+      let currentWeightKG = doConversion(value: weight, constant: kLbsToKG)
+      let heightCM = doConversion(value: height, constant: kInchesToCM)
+      let usualWeightKG = doConversion(value: usualWeight, constant: kLbsToKG)
+      let proteinReq = AnotherNumberFormatter.reSharedInstance.string(from: (((weight as NSString).doubleValue) / kLbsToKG) as NSNumber)
+      let fluid = AnotherNumberFormatter.reSharedInstance.string(from: (getFluid(age, weight: weight) as NSNumber))!
       let IBWPercent = (((weight as NSString).doubleValue) / (Double(IBW)! * kLbsToKG)) * 100
-      let lowProtein = Double(proteinReq)! * Double(proteinLow)!
-      let highProtein = Double(proteinReq)! * Double(proteinHigh)!
-      let roundLowProtein = AnotherNumberFormatter.reSharedInstance.stringFromNumber(lowProtein)!
-      let roundHighProtein = AnotherNumberFormatter.reSharedInstance.stringFromNumber(highProtein)!
+      let lowProtein = Double(proteinReq!)! * Double(proteinLow)!
+      let highProtein = Double(proteinReq!)! * Double(proteinHigh)!
+      let roundLowProtein = AnotherNumberFormatter.reSharedInstance.string(from: (lowProtein) as NSNumber)!
+      let roundHighProtein = AnotherNumberFormatter.reSharedInstance.string(from: highProtein as NSNumber)!
       let UsualPercent = (((Double(currentWeightKG)! * kLbsToKG) / (usualWeight as NSString).doubleValue)) * 100
-      let usualRound = AnotherNumberFormatter.reSharedInstance.stringFromNumber(UsualPercent)!
-      let IBWRound = AnotherNumberFormatter.reSharedInstance.stringFromNumber(IBWPercent)!
+      let usualRound = AnotherNumberFormatter.reSharedInstance.string(from: (UsualPercent) as NSNumber)!
+      let IBWRound = AnotherNumberFormatter.reSharedInstance.string(from: (IBWPercent) as NSNumber)!
       let finalIBW = getIBW(IBW)
-      let finalTeeLow = AnotherNumberFormatter.reSharedInstance.stringFromNumber(Double(TEELow)!)!
-      let finalTeeHigh = AnotherNumberFormatter.reSharedInstance.stringFromNumber(Double(TEEHigh)!)!
-      let finalREE = AnotherNumberFormatter.reSharedInstance.stringFromNumber(Double(REE)!)!
-      let finalBMI = AnotherNumberFormatter.reSharedInstance.stringFromNumber(Double(BMI)!)!
+      let finalTeeLow = AnotherNumberFormatter.reSharedInstance.string(from: (Double(TEELow) as NSNumber!))!
+      let finalTeeHigh = AnotherNumberFormatter.reSharedInstance.string(from: (Double(TEEHigh) as NSNumber!))!
+      let finalREE = AnotherNumberFormatter.reSharedInstance.string(from: (Double(REE) as NSNumber!))!
+      let finalBMI = AnotherNumberFormatter.reSharedInstance.string(from: (Double(BMI) as NSNumber!))!
       
-      self.heightInchesLabel.text = "\(height)in/\(heightCM)cm"
-      self.currentWeightLabel.text = "\(weight)lbs/\(currentWeightKG)kg"
-      self.usualWeightLabel.text = "\(usualWeight)lbs/\(usualWeightKG)kg"
+      self.heightInchesLabel.text = "\(height!)in/\(heightCM)cm"
+      self.currentWeightLabel.text = "\(weight!)lbs/\(currentWeightKG)kg"
+      self.usualWeightLabel.text = "\(usualWeight!)lbs/\(usualWeightKG)kg"
       self.proteinLowLabel.text = "\(roundLowProtein)g - \(roundHighProtein)g"
       self.REELabel.text = "\(finalREE) kcal/d"
       self.TEELowLabel.text = "\(finalTeeLow) - \(finalTeeHigh) kcal/d"
@@ -84,28 +114,21 @@ class ResultsTableViewController: UITableViewController {
       self.percentUsualLabel.text = "\(usualRound)% of Usual"
       self.BMILabel.text = "BMI:\(finalBMI)"
       
-      if Double(BMI) >= 18.5 && Double(BMI) <= 24.9 {
-        self.BMILabel.textColor = UIColor.greenColor()
-      } else if Double(BMI) >= 25 && Double(BMI) <= 29.9 {
-        self.BMILabel.textColor = UIColor.orangeColor()
-      } else if Double(BMI) >= 30 {
-        self.BMILabel.textColor = UIColor.redColor()
-      } else {
-        self.BMILabel.textColor = UIColor.blueColor()
-      }
+
+      setTextColor(bmi: Double(BMI)!)
     }
  
   
 //MARK: SOME FUNCTIONS 
   
-  func ageAsInt(age: String) -> Int {
+  func ageAsInt(_ age: String) -> Int {
     if let newAge = Int(age) {
       return newAge
     }
     return 0
   }
   
-  func getFluid(age: String, weight: String) -> Double {
+  func getFluid(_ age: String, weight: String) -> Double {
     let newAge = ageAsInt(age)
     let nweight = Double(weight)
     let weightKG = nweight! / kLbsToKG
@@ -123,7 +146,7 @@ class ResultsTableViewController: UITableViewController {
     }
   }
   
-  func getIBW(IBW: String) -> [Double] {
+  func getIBW(_ IBW: String) -> [Double] {
     var newIBW = Double(IBW)
     newIBW = newIBW! * kLbsToKG
     let newIBWMin = newIBW! - (newIBW! * 0.1)
@@ -132,6 +155,26 @@ class ResultsTableViewController: UITableViewController {
     return IBWs
   }
   
+  func doConversion(value: String, constant: Double) -> String {
+    if constant == kLbsToKG {
+      let convertedNumber = Double(value)! / constant
+      return NewNumberFormatter.sharedInstance.string(from: (convertedNumber) as NSNumber)!
+    } else {
+      let convertedNumber = Double(value)! * constant
+      return NewNumberFormatter.sharedInstance.string(from: (convertedNumber) as NSNumber)!
+    }
+  }
+  
+  func setTextColor(bmi: Double) {
+    switch bmi {
+    case 18.5 ..< 24.9:
+      self.BMILabel.textColor = UIColor.green
+    case 25 ..< 29.9:
+      self.BMILabel.textColor = UIColor.orange
+    default:
+      self.BMILabel.textColor = UIColor.red
+    }
+  }
   
 }
 

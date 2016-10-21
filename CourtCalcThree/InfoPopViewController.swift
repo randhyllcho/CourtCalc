@@ -14,21 +14,21 @@ class InfoPopViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
       
-      let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.Light)
+      let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.light)
       let blurEffectView = UIVisualEffectView(effect: blurEffect)
     
       let imageView = UIImageView(image: UIImage(named: "unicat copy.png"))
       imageView.frame = view.bounds
-      imageView.contentMode = .ScaleToFill
-      view.insertSubview(imageView, atIndex: 0)
+      imageView.contentMode = .scaleToFill
+      view.insertSubview(imageView, at: 0)
       blurEffectView.frame = self.view.bounds
-      view.insertSubview(blurEffectView, atIndex: 1)
+      view.insertSubview(blurEffectView, at: 1)
 
     }
 
 
-  @IBAction func doneButtonPressed(sender: AnyObject) {
-    self.dismissViewControllerAnimated(true) { () -> Void in
+  @IBAction func doneButtonPressed(_ sender: AnyObject) {
+    self.dismiss(animated: true) { () -> Void in
       
     }
   }

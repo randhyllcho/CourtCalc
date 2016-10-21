@@ -58,7 +58,7 @@ class FactorsTableViewController: UITableViewController, UITextFieldDelegate, Fa
     return 0.0
   }
   
-  func textFieldShouldReturn(textField: UITextField) -> Bool {
+  func textFieldShouldReturn(_ textField: UITextField) -> Bool {
     let nextTag = textField.tag + 1
     let nextResponder: UIResponder? = textField.superview?.superview?.viewWithTag(nextTag)
     if let nextR = nextResponder {
@@ -71,58 +71,35 @@ class FactorsTableViewController: UITableViewController, UITextFieldDelegate, Fa
   
 // MARK: PREPARE FOR SEGUE
   
-  override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
+  override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
     if identifier == "RESULTS" {
-      if age.text!.isEmpty {
-        let alert = UIAlertController(title: "Missing Info", message: "Please Enter Age", preferredStyle: UIAlertControllerStyle.Alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { (action) -> Void in
-        }))
-        presentViewController(alert, animated: true, completion: nil)
-      }
-     else if height.text!.isEmpty {
-        let alert = UIAlertController(title: "Missing Info", message: "Please Enter Height", preferredStyle: UIAlertControllerStyle.Alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { (action) -> Void in
-        }))
-        presentViewController(alert, animated: true, completion: nil)
-    } else if currentWeight.text!.isEmpty {
-      let alert = UIAlertController(title: "Missing Info", message: "Please Enter Weight", preferredStyle: UIAlertControllerStyle.Alert)
-      alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { (action) -> Void in
-      }))
-      presentViewController(alert, animated: true, completion: nil)
-      } else if normalWeight.text!.isEmpty {
-        let alert = UIAlertController(title: "Missing Info", message: "Please Enter Weight", preferredStyle: UIAlertControllerStyle.Alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { (action) -> Void in
-        }))
-        presentViewController(alert, animated: true, completion: nil)
-      } else if minActivityFactor.text!.isEmpty {
-        let alert = UIAlertController(title: "Missing Info", message: "Please Enter Activity Factor", preferredStyle: UIAlertControllerStyle.Alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { (action) -> Void in
-        }))
-        presentViewController(alert, animated: true, completion: nil)
-      } else if maxActivityFactor.text!.isEmpty {
-        let alert = UIAlertController(title: "Missing Info", message: "Please Enter Activity Factor", preferredStyle: UIAlertControllerStyle.Alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { (action) -> Void in
-        }))
-        presentViewController(alert, animated: true, completion: nil)
-      } else if minProteinFactor.text!.isEmpty {
-        let alert = UIAlertController(title: "Missing Info", message: "Please Enter Protein Factor", preferredStyle: UIAlertControllerStyle.Alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { (action) -> Void in
-        }))
-        presentViewController(alert, animated: true, completion: nil)
-      } else if maxProteinFactor.text!.isEmpty {
-        let alert = UIAlertController(title: "Missing Info", message: "Please Enter Protein Factor", preferredStyle: UIAlertControllerStyle.Alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { (action) -> Void in
-        }))
-        presentViewController(alert, animated: true, completion: nil)
-      } 
+      emptyCheck(field: age)
+      emptyCheck(field: height)
+      emptyCheck(field: currentWeight)
+      emptyCheck(field: normalWeight)
+      emptyCheck(field: minActivityFactor)
+      emptyCheck(field: maxActivityFactor)
+      emptyCheck(field: minProteinFactor)
+      emptyCheck(field: maxProteinFactor)
     }
     return true
   }
   
-  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+  func emptyCheck(field: UITextField) {
+    let textDict = [age: "Please enter an Age", height: "Please enter a Height", currentWeight: "Please enter a Weight", normalWeight: "Please enter a Weight", minActivityFactor: "Please enter a Minimum Activity Factor", maxActivityFactor: "Please enter a Maximum Activity Factor", minProteinFactor: "Please enter a Minimum Protein Factor", maxProteinFactor: "Please enter a Maximum Protein Factor"]
+    
+    if field.text!.isEmpty {
+      let alert = UIAlertController(title: "Missing Info", message: textDict[field], preferredStyle: .alert)
+      alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
+      }))
+      present(alert, animated: true, completion: nil)
+    }
+  }
+  
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     if segue.identifier == "RESULTS" {
       if sexSelector.selectedSegmentIndex == 0 {
-        if let resultsVC = segue.destinationViewController as? ResultsTableViewController {
+        if let resultsVC = segue.destination as? ResultsTableViewController {
           
           let maleREE = conversion.maleREE(weight: (self.currentWeight?.text)!, height: (self.height?.text)!, age: (self.age?.text)!)
           let minMaleTEE = conversion.minMaleTEE(activity: (self.minActivityFactor?.text)!, weight: (self.currentWeight?.text)!, height: (self.height?.text)!, age: (self.age?.text)!)
@@ -137,22 +114,17 @@ class FactorsTableViewController: UITableViewController, UITextFieldDelegate, Fa
           resultsVC.activityLow = self.minActivityFactor.text
           resultsVC.activityHigh = self.maxActivityFactor.text
           resultsVC.REE = "\(maleREE)"
-          print("This: \(maleREE)")
           resultsVC.TEELow = "\(minMaleTEE)"
           resultsVC.TEEHigh = "\(maxMaleTEE)"
           resultsVC.IBW = "\(getIBW() + 50)"
           resultsVC.BMI = "\(BMI())"
         }
       } else {
-        if let resultsVC = segue.destinationViewController as? ResultsTableViewController {
+        if let resultsVC = segue.destination as? ResultsTableViewController {
           
           let femaleREE = conversion.femaleREE(weight: (self.currentWeight?.text)!, height: (self.height?.text)!, age: (self.age?.text)!)
           let minFemaleTEE = conversion.minFemaleTEE(activity: (self.minActivityFactor?.text)!, weight: (self.currentWeight?.text)!, height: (self.height?.text)!, age: (self.age?.text)!)
           let maxFemaleTEE = conversion.maxFemaleTEE(activity: (self.maxActivityFactor?.text)!, weight: (self.currentWeight?.text)!, height: (self.height?.text)!, age: (self.age?.text)!)
-          
-          print(currentWeight.text)
-          print(height.text)
-          print(age.text)
           
           resultsVC.height = self.height.text
           resultsVC.age = self.age.text
@@ -163,7 +135,6 @@ class FactorsTableViewController: UITableViewController, UITextFieldDelegate, Fa
           resultsVC.activityLow = self.minActivityFactor.text
           resultsVC.activityHigh = self.maxActivityFactor.text
           resultsVC.REE = "\(femaleREE)"
-          print(femaleREE)
           resultsVC.TEELow = "\(minFemaleTEE)"
           resultsVC.TEEHigh = "\(maxFemaleTEE)"
           resultsVC.IBW = "\(getIBW() + 45.5)"

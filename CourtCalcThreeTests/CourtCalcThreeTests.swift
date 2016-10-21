@@ -34,7 +34,7 @@ class CourtCalcThreeTests: XCTestCase {
         let IBW = weightAddition + 106.0
         return IBW
       }
-        self.measureBlock {
+        self.measure {
             // Put the code you want to measure the time of here.
           func getIBW() -> Float {
             let heightFactor = Float(74.0) - 60.0

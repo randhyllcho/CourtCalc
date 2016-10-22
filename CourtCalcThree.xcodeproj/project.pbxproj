@@ -13,6 +13,7 @@
 		32772A3D1DB81E9E00AB590D /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32772A3C1DB81E9E00AB590D /* Media.xcassets */; };
 		32772A3F1DB81EAD00AB590D /* Icon-60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 32772A3E1DB81EAD00AB590D /* Icon-60@3x.png */; };
 		32772A411DB81EB200AB590D /* Icon-60@3x@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 32772A401DB81EB200AB590D /* Icon-60@3x@2x.png */; };
+		32775F221DBADFA50024E12F /* ProtoExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32775F211DBADFA50024E12F /* ProtoExt.swift */; };
 		3278E4C41C84F939007A8DDA /* InfoPopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3278E4C31C84F939007A8DDA /* InfoPopViewController.swift */; };
 		32B5B02C1BBF234700A910C4 /* ResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B5B02B1BBF234700A910C4 /* ResultsTableViewController.swift */; };
 		32F2B99D1BB9EF4900A7FF70 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F2B99C1BB9EF4900A7FF70 /* AppDelegate.swift */; };
@@ -49,6 +50,7 @@
 		32772A3C1DB81E9E00AB590D /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Media.xcassets; path = ../Media.xcassets; sourceTree = "<group>"; };
 		32772A3E1DB81EAD00AB590D /* Icon-60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-60@3x.png"; path = "AppIcon.appiconset/Icon-60@3x.png"; sourceTree = "<group>"; };
 		32772A401DB81EB200AB590D /* Icon-60@3x@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-60@3x@2x.png"; path = "AppIcon.appiconset/Icon-60@3x@2x.png"; sourceTree = "<group>"; };
+		32775F211DBADFA50024E12F /* ProtoExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProtoExt.swift; sourceTree = "<group>"; };
 		3278E4C31C84F939007A8DDA /* InfoPopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoPopViewController.swift; sourceTree = "<group>"; };
 		32B5B02B1BBF234700A910C4 /* ResultsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsTableViewController.swift; sourceTree = "<group>"; };
 		32F2B9991BB9EF4900A7FF70 /* CourtCalcThree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CourtCalcThree.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -97,6 +99,7 @@
 			children = (
 				32F2B9D31BBA2A1B00A7FF70 /* NumberFormatter.swift */,
 				32028BA81BD09560008B95F7 /* FuncMethod.swift */,
+				32775F211DBADFA50024E12F /* ProtoExt.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -320,6 +323,7 @@
 				32F2B99D1BB9EF4900A7FF70 /* AppDelegate.swift in Sources */,
 				32028BA91BD09560008B95F7 /* FuncMethod.swift in Sources */,
 				3278E4C41C84F939007A8DDA /* InfoPopViewController.swift in Sources */,
+				32775F221DBADFA50024E12F /* ProtoExt.swift in Sources */,
 				32B5B02C1BBF234700A910C4 /* ResultsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FactorsTableViewController: UITableViewController, UITextFieldDelegate, Factor {
+class FactorsTableViewController: UITableViewController, UITextFieldDelegate, Factor{
   
   @IBOutlet weak var sexSelector: UISegmentedControl!
   @IBOutlet weak var age: UITextField!
@@ -26,18 +26,18 @@ class FactorsTableViewController: UITableViewController, UITextFieldDelegate, Fa
   var factor = ""
 
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-      tableView.sectionHeaderHeight = kSectionHeight
-      age.delegate = self
-      currentWeight.delegate = self
-      normalWeight.delegate = self
-      minActivityFactor.delegate = self
-      maxActivityFactor.delegate = self
-      minProteinFactor.delegate = self
-      maxProteinFactor.delegate = self
-      height.delegate = self
-    }
+  override func viewDidLoad() {
+      super.viewDidLoad()
+    tableView.sectionHeaderHeight = kSectionHeight
+    age.delegate = self
+    currentWeight.delegate = self
+    normalWeight.delegate = self
+    minActivityFactor.delegate = self
+    maxActivityFactor.delegate = self
+    minProteinFactor.delegate = self
+    maxProteinFactor.delegate = self
+    height.delegate = self
+  }
   
   
 // MARK: FUNCTIONS
@@ -83,17 +83,6 @@ class FactorsTableViewController: UITableViewController, UITextFieldDelegate, Fa
       emptyCheck(field: maxProteinFactor)
     }
     return true
-  }
-  
-  func emptyCheck(field: UITextField) {
-    let textDict = [age: "Please enter an Age", height: "Please enter a Height", currentWeight: "Please enter a Weight", normalWeight: "Please enter a Weight", minActivityFactor: "Please enter a Minimum Activity Factor", maxActivityFactor: "Please enter a Maximum Activity Factor", minProteinFactor: "Please enter a Minimum Protein Factor", maxProteinFactor: "Please enter a Maximum Protein Factor"]
-    
-    if field.text!.isEmpty {
-      let alert = UIAlertController(title: "Missing Info", message: textDict[field], preferredStyle: .alert)
-      alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
-      }))
-      present(alert, animated: true, completion: nil)
-    }
   }
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -144,6 +133,15 @@ class FactorsTableViewController: UITableViewController, UITextFieldDelegate, Fa
     }
   }
   
+  func emptyCheck(field: UITextField) {
+    let textDict = [age: "Please enter an Age", height: "Please enter a Height", currentWeight: "Please enter a Weight", normalWeight: "Please enter a Weight", minActivityFactor: "Please enter a Minimum Activity Factor", maxActivityFactor: "Please enter a Maximum Activity Factor", minProteinFactor: "Please enter a Minimum Protein Factor", maxProteinFactor: "Please enter a Maximum Protein Factor"]
+    
+    if field.text!.isEmpty {
+      let alertView = UIAlertController(title: "Missing Information", message: textDict[field], preferredStyle: .alert)
+      alertView.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+      present(alertView, animated: true, completion: nil)
+    }
+  }
   
 
 }

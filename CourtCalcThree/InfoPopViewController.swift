@@ -14,7 +14,7 @@ class InfoPopViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
       
-      let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.light)
+      let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.light)
       let blurEffectView = UIVisualEffectView(effect: blurEffect)
     
       let imageView = UIImageView(image: UIImage(named: "unicat copy.png"))
